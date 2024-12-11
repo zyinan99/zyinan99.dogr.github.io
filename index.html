@@ -64,7 +64,7 @@
             <span class="doge" style="vertical-align: middle">DOGE</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            DOGE: Towards Versatile Visual Document Grounding and Referring
+            Towards Versatile Visual Document Grounding and Referring
             <!-- <br> -->
             <!-- with GPT-4V, Bard, and Other Large Multimodal Models -->
           </h2>
@@ -137,7 +137,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/ZrrSkywalker/MathVerse"
+                <a href="https://github.com/zyinan99/DOGE"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -147,7 +147,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/AI4Math/MathVerse"
+                <a href="https://github.com/zyinan99/DOGE"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <!-- <i class="far fa-images"></i> -->
@@ -158,7 +158,7 @@
                 </a>
               </span> 
               <!-- Visualization Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://mathverse-cuhk.github.io/#visualization"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -166,27 +166,15 @@
                   </span>
                   <span>Visualize</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Leaderboard Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://mathverse-cuhk.github.io/#leaderboard"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <p style="font-size:18px">🏆</p>
                   </span>
                   <span>Leaderboard</span>
-                </a>
-              </span>
-              <!-- Twitter Link. -->
-              <!-- <span class="link-block">
-                <a href="https://twitter.com/lupantech/status/1717313355780964608"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"> -->
-                      <!-- <i class="far fa-images"></i> -->
-                      <!-- 💻🔗 -->
-                      <!-- <p style="font-size:18px">🌐</p> -->
-                  <!-- </span>
-                  <span>Twitter</span>
                 </a>
               </span> -->
             </div>
@@ -205,30 +193,23 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            The remarkable progress of <b>Multi-modal Large Language Models (MLLMs)</b> has garnered unparalleled attention, due to their superior performance in visual contexts. However, their capabilities in visual math problem-solving remain insufficiently evaluated and understood.<b>We investigate current benchmarks to incorporate excessive visual content within textual questions, which potentially assist MLLMs in deducing answers without truly interpreting the input diagrams</b>.
+          <p>In recent years, Multimodal Large Language Models(MLLMs) have increasingly emphasized grounding and referring capabilities to achieve detailed understanding and flexible user interaction. However, in the realm of visual document understanding, these capabilities lag behind due to the scarcity of fine-grained datasets and comprehensive benchmarks. 
           </p>
-          <p>
-            To this end, we introduce <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span>, an all-around visual math benchmark designed for an equitable and in-depth evaluation of MLLMs. We meticulously collect <b>2,612 high-quality, multi-subject math problems</b> with diagrams from publicly available sources. Each problem is then transformed by human annotators into <b>6 distinct versions</b>, each offering varying degrees of information content in multi-modality, contributing to <b>15K test samples</b> in total.
-            This approach allows <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span> to comprehensively assess <b>whether and how much MLLMs can truly understand the visual diagrams for mathematical reasoning</b>. In addition, we propose a <b>Chain-of-Thought (CoT) evaluation strategy</b> for a fine-grained assessment of the output answers. Rather than naively judging True or False, we employ GPT-4(V) to adaptively extract crucial reasoning steps, and then score each step with detailed error analysis, which can reveal the intermediate CoT reasoning quality by MLLMs.
+          <p>  
+            To fill this gap, we propose the <b>DO</b>cument <b>G</b>rounding and r<b>E</b>ferring data engine (<img src="static/images/doge.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><b>DOGE-Engine</b>), which produces two types of high-quality fine-grained document data: multi-granular parsing data for enhancing fundamental text localization and recognition capabilities; and
+            instruction-tuning data to activate MLLM’s grounding and referring capabilities during dialogue and reasoning. Additionally, using our engine, we construct <img src="static/images/doge.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><b>DOGE-Bench</b>, which encompasses 7 grounding and referring tasks across 3 document types (chart, poster, PDF document), providing
+            comprehensive evaluations for fine-grained document understanding. Furthermore, leveraging the data generated by our engine, we develop a strong baseline model, <img src="static/images/doge.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><b>DOGE</b>.
+            This pioneering MLLM is capable of accurately referring and grounding texts at multiple granularities within document images. Our code, data, and model will be opensourced for community development.
           </p>
-          <p>
-            With <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span>, <b>we unveil that, most existing MLLMs struggle to understand math diagrams, relying heavily on textual questions</b>. Surprisingly, some of them even achieve 5%+ higher accuracy without the visual input, e.g., Qwen-VL-Max and InternLM-XComposer2.
-            In contrast, GPT-4V and ShareGPT4V demonstrate relatively better comprehension of the visual content for mathematical reasoning. We hope the <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span> benchmark may provide unique insights to guide the future development of MLLMs.
-          </p>
+          
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
 </div>
 </section>
-
+<!-- 
 <section class="section">
   <div class="container">
     
@@ -734,7 +715,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
 </section>
 
 <!-- DATASET SECTION -->
