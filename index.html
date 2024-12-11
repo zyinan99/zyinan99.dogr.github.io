@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Evaluating mathematical reasoning of foundation models in visual contexts">
-  <meta name="keywords" content="MathVista, Math Vista">
+        content="Towards Versatile Visual Document Grounding and Referring">
+  <meta name="keywords" content="DOGE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DOGE: Towards Versatile Visual Document Grounding and Referring</title>
 
@@ -22,7 +22,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
 
-  <link rel="icon" href="./static/images/mathverse.png">
+  <link rel="icon" href="./static/images/doge.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -53,61 +53,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <!-- <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a> -->
-      <!-- @PAN TODO: consider adding links? -->
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://mathvista.github.io/">
-            <b>DOGE</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://github.com/OpenGVLab/LLaMA-Adapter">
-            <b>LLaMA-Adapter (V2)</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX">
-            <b>SPHINX-X</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/imagebind_LLM">
-            ImageBind-LLM
-          </a>
-          <a class="navbar-item" href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX">
-            SPHINX
-          </a>
-          <a class="navbar-item" href="https://github.com/ZiyuGuo99/Point-Bind_Point-LLM">
-            Point-Bind & Point-LLM
-          </a>
-          <a class="navbar-item" href="https://github.com/ZrrSkywalker/Personalize-SAM">
-            PerSAM
-          </a>
-          <a class="navbar-item" href="https://github.com/mathllm/MathCoder">
-            MathCoder
-          </a>
-          <a class="navbar-item" href="https://wangk.org/publications/1_iclr2024_csv/">
-            CSV
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 
 <section class="hero">
   <div class="hero-body">
@@ -115,8 +60,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/doge" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista" style="vertical-align: middle">DOGE</span>
+            <img src="./static/images/doge.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="doge" style="vertical-align: middle">DOGE</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
             DOGE: Towards Versatile Visual Document Grounding and Referring
@@ -125,66 +70,43 @@
           </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://zrrskywalker.github.io/">Renrui Zhang*</a><sup style="color:#6fbf73;">1</sup><sup style="color:#000000;">,</sup><sup style="color:#ed4b82;">2</sup>,</span>
+              Yinan Zhou*<sup style="color:#6fbf73;">1</sup><sup style="color:#000000;">,</sup><sup style="color:#ed4b82;">2</sup><sup style="color:#000000;">,</sup><sup style="color:#9400D3">3</sup>,</span>
             <span class="author-block">
-              <a href="https://github.com/CaraJ7">Dongzhi Jiang*</a><sup style="color:#6fbf73;">1</sup>,</span>
+              Yuxin Chen*†<sup style="color:#ed4b82;">2</sup>,</span>
             <span class="author-block">
-              <a href="https://github.com/void721">Yichi Zhang*</a><sup style="color:#ed4b82;">2</sup>,
+              <a href="https://github.com/FelixMessi">Haokun Lin</a><sup style="color:#ed4b82">2</sup><sup style="color:#000000;">,</sup><sup style="color:#9400D3">3</sup><sup style="color:#000000;">,</sup><sup style="color:#ffac33">4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/FelixMessi">Haokun Lin</a><sup style="color:#ed4b82">2</sup>,
+              Shuyu Yang<sup style="color:#6fbf73;">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://ziyuguo99.github.io/">Ziyu Guo</a><sup style="color:#ed4b82">2</sup><sup style="color:#000000;">,</sup><sup style="color:#9400D3">3</sup>,
+              Li Zhu<sup style="color:#6fbf73;">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://prnszz.github.io/">Pengshuo Qiu</a><sup style="color:#ed4b82">2</sup>,
+              Zhongang Qi‡<sup style="color:#ed4b82;">2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=cC8lXi8AAAAJ&hl=en">Aojun Zhou</a><sup style="color:#6fbf73;">1</sup>,
+              Chen Ma‡<sup style="color:#9400D3">3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://lupantech.github.io/">Pan Lu</a><sup style="color:#ffac33">4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a><sup style="color:#ffac33">4</sup>
-            </span>
-            <span class="author-block">
-              <a href="https://gaopengcuhk.github.io/">Peng Gao</a><sup style="color:#ed4b82">2</sup>
-            </span>
-            <span class="author-block">
-              <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a><sup style="color:#6fbf73">1</sup>
+              Ying Shan<sup style="color:#ed4b82;">2</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>CUHK MMLab,</span>
-            <span class="author-block"><sup style="color:#ed4b82">2</sup>Shanghai AI Laboratory,</span>
-            <span class="author-block"><sup style="color:#9400D3">3</sup>CUHK MiuLar Lab,</span><br>
-            <span class="author-block"><sup style="color:#ffac33">4</sup>University of California, Los Angeles</span><br>
-            <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>Xi’an Jiaotong University,</span>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>ARC Lab, Tencent PCG,</span>
+            <span class="author-block"><sup style="color:#9400D3">3</sup>City University of Hongkong,</span><br>
+            <span class="author-block"><sup style="color:#ffac33">4</sup>Institute of Automation, CAS</span><br>
           </div>
         
-          <!-- <section> -->
-            <!-- <div class="section" id="org-banners" style="display:fle">
-              <a href="https://www.ucla.edu/" target="_blank" rel="external">
-                  <img class="center-block org-banner" src="static/images/ucla.png" style="height:3em">
-              </a>
-              <a href="https://www.washington.edu/" target="blank" class="ext-link">
-                  <img class="center-block org-banner" src="static/images/uw.png" style="height:3em">
-              </a>
-              <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
-                  <img class="center-block org-banner" src="static/images/microsoft.png" style="height:3em">
-              </a>
-            </div> -->
-          <!-- </section> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
                 <!-- @PAN TODO: change links -->
-                <a href="https://arxiv.org/pdf/2403.14624.pdf"
+                <a href="https://arxiv.org/pdf/2411.17125"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -193,7 +115,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.14624"
+                <a href="https://arxiv.org/pdf/2411.17125"
                    class="external-link button is-normal is-rounded is-dark">
                 <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
                    class="external-link button is-normal is-rounded is-dark"> -->
