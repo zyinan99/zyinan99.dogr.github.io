@@ -94,7 +94,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"></span>*Equal Contribution †Project Lead ‡Corresponding Authors ,</span>
+            <span class="author-block"></span>*Equal Contribution †Project Lead ‡Corresponding Authors ,</span><br>
             <span class="author-block"><sup style="color:#6fbf73;">1</sup>Xi’an Jiaotong University,</span>
             <span class="author-block"><sup style="color:#ed4b82">2</sup>ARC Lab, Tencent PCG,</span>
             <span class="author-block"><sup style="color:#9400D3">3</sup>City University of Hongkong,</span><br>
@@ -232,10 +232,13 @@
           <p>
             <img src="static/images/doge.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">DOGE-Engine</span> 
-            is a holistic and specialized visual math benchmark crafted to evaluate the multi-modal mathematical reasoning skills of MLLMs. 
-            This benchmark encompasses a meticulously collected dataset of <b>2,612 visual math problems</b>, with <b>1,236 newly acquired</b> from public question repositories and <b>1,376 selected from existing benchmarks</b>, ensuring a diverse range of challenges. To specialize in mathematical reasoning, <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span> spans <b>three primary areas: plane geometry, solid geometry, and functions</b>. Each problem has been rigorously reviewed by expert annotators and classified into <b>12 detailed categories</b>, emphasizing different fine-grained problem-solving capabilities. Notably, <img src="static/images/mathverse.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVerse</span> distinguishes itself by introducing <b>2 novel strategies</b> for evaluating MLLMs.
+
+            Well-annotated and diverse grounded data are crucial for improving the grounding and referring capabilities of MLLMs. Currently, there is a shortage of comprehensive and accurately labeled document grounded data. 
+            Manually annotating raw document images is both time-consuming and labor-intensive, as it requires not only marking the bounding boxes but also accurately annotating all the text within those boxes. 
+            To tackle this challenge, we collect a substantial volume of documents and develop the DOGE-Engine to construct fine-grained document grounded datasets. Our document data sources primarily encompass three document data types:
+            posters, charts, and PDF documents. As shown below, we start by filtering the raw data to remove low-quality samples or those with missing or broken information. Then, we introduce the generation of two types of high-quality document data: 
+            The annotation process of multi-granular parsing data and the construction pipeline of instruction-tuning data. An overview of statistical information is also provided below.
+
           </p>
 
         <div id="results-carousel" class="carousel results-carousel">
@@ -243,14 +246,26 @@
             <div class="content has-text-centered">
               <img src="static/images/pipeline.png" alt="algebraic reasoning" width="80%"/>
               <p> Pipeline of
-                <span class="doge">DOGE-Engine</span>.
+                <span class="doge">DOGE-Engine</span>.</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/doge_page.png" alt="arithmetic reasoning" width="100%"/>
               <p> Training data composition of 
-                <span class="doge">DOGE-Dataset</span>.
+                <span class="doge">DOGE-Dataset</span>.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/bitwise2.png" alt="arithmetic reasoning" width="100%"/>
+              <p> Rerendering Stategy for Poster and Chart.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/merge.png" alt="arithmetic reasoning" width="100%"/>
+              <p> Merge Strategy for PDF document.</p>
             </div>
           </div>
         </div>
